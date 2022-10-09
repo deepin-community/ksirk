@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.ksirk.desktop</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>KSirk</name>
+  <name xml:lang="ca">KSirk</name>
+  <name xml:lang="ca-valencia">KSirk</name>
+  <name xml:lang="cs">KSirk</name>
+  <name xml:lang="da">KSirk</name>
+  <name xml:lang="de">KSirk</name>
+  <name xml:lang="en-GB">KSirk</name>
+  <name xml:lang="es">KSirk</name>
+  <name xml:lang="et">KSirk</name>
+  <name xml:lang="fi">KSirk</name>
+  <name xml:lang="fr">KSirk</name>
+  <name xml:lang="gl">KSirk</name>
+  <name xml:lang="id">KSirk</name>
+  <name xml:lang="it">KSirk</name>
+  <name xml:lang="ko">KsirK</name>
+  <name xml:lang="nl">KSirk</name>
+  <name xml:lang="nn">KSirk</name>
+  <name xml:lang="pl">KSirk</name>
+  <name xml:lang="pt">KSirk</name>
+  <name xml:lang="pt-BR">KSirk</name>
+  <name xml:lang="ru">KSirk</name>
+  <name xml:lang="sk">KSirk</name>
+  <name xml:lang="sl">KSirk</name>
+  <name xml:lang="sr">К‑сирк</name>
+  <name xml:lang="sr-Latn">KSirk</name>
+  <name xml:lang="sr-ijekavian">К‑сирк</name>
+  <name xml:lang="sr-ijekavianlatin">KSirk</name>
+  <name xml:lang="sv">Ksirk</name>
+  <name xml:lang="uk">KsirK</name>
+  <name xml:lang="x-test">xxKSirkxx</name>
+  <name xml:lang="zh-TW">KSirk</name>
+  <summary>World Domination Strategy Game</summary>
+  <summary xml:lang="ca">Joc d'estratègia per a la dominació mundial</summary>
+  <summary xml:lang="ca-valencia">Joc d'estratègia per a la dominació mundial</summary>
+  <summary xml:lang="cs">Strategická hra o světovou nadvládu</summary>
+  <summary xml:lang="de">Welteroberungsspiel</summary>
+  <summary xml:lang="en-GB">World Domination Strategy Game</summary>
+  <summary xml:lang="es">Juego de estrategia de dominación del mundo</summary>
+  <summary xml:lang="et">Maailma vallutamise strateegiamäng</summary>
+  <summary xml:lang="fi">Strateginen maailmanvalloituspeli</summary>
+  <summary xml:lang="fr">Jeu de stratégie pour la conquête du monde</summary>
+  <summary xml:lang="gl">Xogo de estratexia e dominación mundial</summary>
+  <summary xml:lang="id">Permainan Strategi Menguasai Dunia</summary>
+  <summary xml:lang="it">Gioco di strategia per la dominazione del mondo</summary>
+  <summary xml:lang="ko">우주 정복 전략 게임</summary>
+  <summary xml:lang="nl">Werelddominatie-strategiespel</summary>
+  <summary xml:lang="nn">Kamp om verdsherredøme</summary>
+  <summary xml:lang="pl">Gra strategiczna o dominacji świata</summary>
+  <summary xml:lang="pt">Jogo Estratégico de Conquista do Mundo</summary>
+  <summary xml:lang="pt-BR">Jogo de estratégias de dominação do mundial</summary>
+  <summary xml:lang="sk">Strategická hra s ovládnutím sveta</summary>
+  <summary xml:lang="sl">Strateška igra svetovne nadvlade</summary>
+  <summary xml:lang="sr">Стратешка игра светске доминације</summary>
+  <summary xml:lang="sr-Latn">Strateška igra svetske dominacije</summary>
+  <summary xml:lang="sr-ijekavian">Стратешка игра светске доминације</summary>
+  <summary xml:lang="sr-ijekavianlatin">Strateška igra svetske dominacije</summary>
+  <summary xml:lang="sv">Strategispel för världsdominans</summary>
+  <summary xml:lang="uk">Стратегічна гра у світове панування</summary>
+  <summary xml:lang="x-test">xxWorld Domination Strategy Gamexx</summary>
+  <summary xml:lang="zh-CN">世界支配战略游戏</summary>
+  <description>
+    <p>
+      KsirK is a computerized version of the well known strategic board game Risk.
+      The goal of the game is simply to conquer the world by attacking your neighbors with your armies.
+    </p>
+    <p xml:lang="ca">El KsirK és una versió per a ordinador del famós joc d'estratègia de tauler Risk. L'objectiu del joc és senzillament conquerir el món atacant els veïns amb els exèrcits.</p>
+    <p xml:lang="ca-valencia">El KsirK és una versió per a ordinador del famós joc d'estratègia de tauler Risk. L'objectiu del joc és senzillament conquerir el món atacant els veïns amb els exèrcits.</p>
+    <p xml:lang="de">KsirK ist eine computergestützte Version des bekannten Strategiespiels Risiko. Das Spielziel ist es, die Weltherrschaft zu erlangen. Dies geschieht durch das Angreifen der Gegner in den Nachbarländern mit den eigenen Armeen.</p>
+    <p xml:lang="en-GB">KsirK is a computerised version of the well known strategic board game Risk. The goal of the game is simply to conquer the world by attacking your neighbours with your armies.</p>
+    <p xml:lang="es">KsirK es una versión informatizada del conocido juego de estrategia Risk. El objetivo del juego es conquistar el mundo usando ejércitos para atacar a los vecinos.</p>
+    <p xml:lang="et">KsirK  on tuntud strateegilise lauamängu Risk arvutisse üle kantud versioon. Mängu siht on lihtne: vallutada terve maailm, rünnates naabreid oma sõjaväega.</p>
+    <p xml:lang="fi">KSirK on tietokoneistettu versio tunnetusta Risk-strategialautapelistä. Tavoitteena on yksinkertaisesti vallata maailma hyökkäämällä armeijoinesi naapurien kimppuun.</p>
+    <p xml:lang="fr">KsirK est une version informatisée du célèbre jeu de stratégie Risk. L'objectif du jeu est de conquérir le monde en attaquant vos voisins avec vos armées.</p>
+    <p xml:lang="gl">KsirK é unha versión de computador do ben coñecido xogo estratéxico de taboleiro Risk. o obxectivo do xogo O obxectivo do xogo é simplemente conquistar o mundo atacando aos veciños cos teus exércitos.</p>
+    <p xml:lang="id">KsirK adalah versi terkomputerisasi dari permainan papan strategis Risk yang terkenal. Tujuan permainan ini hanyalah untuk menaklukkan dunia dengan menyerang tetanggamu dengan pasukanmu.</p>
+    <p xml:lang="it">KsirK è una versione per il computer del famoso gioco strategico da tavola Risk. L'obiettivo del gioco è semplicemente la conquista del mondo attaccando i vicini con le proprie armate.</p>
+    <p xml:lang="ko">KsirK는 전략 보드 게임 Risk의 컴퓨터 버전입니다. 게임의 목표는 군사를 동원하여 상대방을 공격해서 세계를 정복하는 것입니다.</p>
+    <p xml:lang="nl">KsirK is een gecomputeriseerde versie van het welbekende strategische bordspel Risk. Het doel van het spel is eenvoudig de wereld veroveren door uw buren aan te vallen met uw legers.</p>
+    <p xml:lang="nn">KsirK er ein elektronisk variant av det kjende brettspelet Risk. Målet er å få verdsherredøme ved å angripa nabolanda dine med soldatar.</p>
+    <p xml:lang="pl">KsirK jest skomputeryzowaną wersją dobrze znanej strategicznej gry planszowej Risk. Celem gry jest po prostu podbicie świata poprzez atakowanie swoich sąsiadów swoją armią.</p>
+    <p xml:lang="pt">O KsirK é uma versão em computador do conhecido jogo de estratégia do Risco. O objectivo do jogo é simplesmente conquistar o mundo, atacando os seus vizinhos com os seus exércitos.</p>
+    <p xml:lang="pt-BR">KsirK é uma versão computadorizada do conhecido jogo de estratégia War. O objetivo do jogo é simplesmente conquistar o mundo, atacando os seus vizinhos com os seus exércitos.</p>
+    <p xml:lang="sk">KsirK je počítačová verzia známej strategickej doskovej hry Risk. Cieľom hry je jednoducho dobyť svet pomocou útoku na vašich susedov vašou armádou.</p>
+    <p xml:lang="sl">KsirK je računalniška različica znane strateške namizne igre imenovane Risk. Cilj igre je z napadanjem sosedov zajeti svet.</p>
+    <p xml:lang="sr">К‑сирк је рачунарска верзија добро познате стратешке игре на табли ризико. Циљ партије је просто освојити цео свет, нападајући суседе својим војскама.</p>
+    <p xml:lang="sr-Latn">KSirk je računarska verzija dobro poznate strateške igre na tabli riziko. Cilj partije je prosto osvojiti ceo svet, napadajući susede svojim vojskama.</p>
+    <p xml:lang="sr-ijekavian">К‑сирк је рачунарска верзија добро познате стратешке игре на табли ризико. Циљ партије је просто освојити цео свет, нападајући суседе својим војскама.</p>
+    <p xml:lang="sr-ijekavianlatin">KSirk je računarska verzija dobro poznate strateške igre na tabli riziko. Cilj partije je prosto osvojiti ceo svet, napadajući susede svojim vojskama.</p>
+    <p xml:lang="sv">Ksirk är en datoriserad version av det välkända strategiska brädspelet Risk. Spelets mål är helt enkelt att erövra världen genom att anfalla grannländer med dina arméer.</p>
+    <p xml:lang="uk">KsirK — комп’ютеризована версія добре відомої стратегічної гри Risk. Метою гри є звичайне завоювання світу. Ця мета досягається нападом на ваших сусідів за допомогою ваших армій.</p>
+    <p xml:lang="x-test">xxKsirK is a computerized version of the well known strategic board game Risk. The goal of the game is simply to conquer the world by attacking your neighbors with your armies.xx</p>
+    <p>Features:</p>
+    <p xml:lang="ca">Característiques:</p>
+    <p xml:lang="ca-valencia">Característiques:</p>
+    <p xml:lang="cs">Vlastnosti:</p>
+    <p xml:lang="de">Funktionen:</p>
+    <p xml:lang="en-GB">Features:</p>
+    <p xml:lang="es">Funciones:</p>
+    <p xml:lang="et">Omadused:</p>
+    <p xml:lang="fi">Ominaisuudet:</p>
+    <p xml:lang="fr">Fonctionnalités :</p>
+    <p xml:lang="gl">Funcionalidades:</p>
+    <p xml:lang="id">Fitur:</p>
+    <p xml:lang="it">Caratteristiche:</p>
+    <p xml:lang="ko">기능:</p>
+    <p xml:lang="nl">Mogelijkheden:</p>
+    <p xml:lang="nn">Funksjonar:</p>
+    <p xml:lang="pl">Możliwości:</p>
+    <p xml:lang="pt">Funcionalidades:</p>
+    <p xml:lang="pt-BR">Recursos:</p>
+    <p xml:lang="ru">Возможности:</p>
+    <p xml:lang="sk">Funkcie:</p>
+    <p xml:lang="sl">Zmožnosti:</p>
+    <p xml:lang="sr">Могућности:</p>
+    <p xml:lang="sr-Latn">Mogućnosti:</p>
+    <p xml:lang="sr-ijekavian">Могућности:</p>
+    <p xml:lang="sr-ijekavianlatin">Mogućnosti:</p>
+    <p xml:lang="sv">Funktioner:</p>
+    <p xml:lang="uk">Можливості:</p>
+    <p xml:lang="x-test">xxFeatures:xx</p>
+    <p xml:lang="zh-CN">功能：</p>
+    <p xml:lang="zh-TW">功能：</p>
+    <ul>
+      <li>Support for 1-6 human or computer (AI) players</li>
+      <li xml:lang="ca">Permet entre 1 i 6 jugadors humans o ordinadors (IA)</li>
+      <li xml:lang="ca-valencia">Permet entre 1 i 6 jugadors humans o ordinadors (IA)</li>
+      <li xml:lang="de">Unterstützung für 1-6 menschliche oder Rechnerspieler (KI)</li>
+      <li xml:lang="en-GB">Support for 1-6 human or computer (AI) players</li>
+      <li xml:lang="es">Permite de 1 a 6 jugadores humanos o de la computadora (IA)</li>
+      <li xml:lang="et">1-6 inimesest või arvutist mängija toetus</li>
+      <li xml:lang="fi">1–6 ihmis- tai tietokonepelaajaa</li>
+      <li xml:lang="fr">De 1 à 6 joueurs humains ou intelligences artificielles</li>
+      <li xml:lang="gl">Permite entre 1 e 6 xogadores, humanos ou do computador (intelixencia artificial).</li>
+      <li xml:lang="id">Dukungan untuk 1-6 pemain manusia atau komputer (AI)</li>
+      <li xml:lang="it">Supporto da 1 a 6 giocatori umani o computer (IA)</li>
+      <li xml:lang="ko">컴퓨터 및 사람으로 1-6인 플레이 지원</li>
+      <li xml:lang="nl">Ondersteuning voor 1-6 menselijke of computer(AI)spelers</li>
+      <li xml:lang="nn">Frå 1 til 6 spelarar (menneske/datamotstandarar)</li>
+      <li xml:lang="pl">Obsługa dla 1-6 graczy ludzkich lub komputerowych (AI)</li>
+      <li xml:lang="pt">Suporte para 1-6 jogadores humanos ou por computador (IA)</li>
+      <li xml:lang="pt-BR">Suporte de 1 a 6 jogadores humanos ou IA</li>
+      <li xml:lang="sk">Podpora pre 1-6 ľudí alebo počítačových (AI) hráčov</li>
+      <li xml:lang="sl">Podpora za 1-6 človeških ali računalniških igralcev</li>
+      <li xml:lang="sr">Подршка за 1–6 људских и рачунарских играча</li>
+      <li xml:lang="sr-Latn">Podrška za 1–6 ljudskih i računarskih igrača</li>
+      <li xml:lang="sr-ijekavian">Подршка за 1–6 људских и рачунарских играча</li>
+      <li xml:lang="sr-ijekavianlatin">Podrška za 1–6 ljudskih i računarskih igrača</li>
+      <li xml:lang="sv">Stöd för 1 - 6 personer eller datorspelare (artificiella intelligenser)</li>
+      <li xml:lang="uk">Підтримка від одного до шести гравців (людей або комп’ютерних гравців)</li>
+      <li xml:lang="x-test">xxSupport for 1-6 human or computer (AI) playersxx</li>
+      <li xml:lang="zh-TW">支援 1-6 個人或電腦 (AI) 玩家</li>
+      <li>Multi-player gaming over a network</li>
+      <li xml:lang="ca">Jocs multijugador per la xarxa</li>
+      <li xml:lang="ca-valencia">Jocs multijugador per la xarxa</li>
+      <li xml:lang="de">Spiele mit mehreren Teilnehmern im Netzwerk</li>
+      <li xml:lang="en-GB">Multi-player gaming over a network</li>
+      <li xml:lang="es">Juego multijugador a través de una red</li>
+      <li xml:lang="et">Mitme mängijaga mängu võimalus üle võrgu</li>
+      <li xml:lang="fi">Monen pelaajan verkkopelit</li>
+      <li xml:lang="fr">Jeu multi-joueurs en réseau</li>
+      <li xml:lang="gl">Permite a varias persoas xogar xuntas a través dunha rede.</li>
+      <li xml:lang="id">Multi-pemain memainkan lintas jaringan</li>
+      <li xml:lang="it">Gioco multi-giocatore tramite la rete</li>
+      <li xml:lang="ko">네트워크 기반 멀티플레이어</li>
+      <li xml:lang="nl">Met meerdere speler spelen over een netwerk</li>
+      <li xml:lang="nn">Fleire kan spela mot kvarandre via nettverk</li>
+      <li xml:lang="pl">Gra wieloosobowa przez sieć</li>
+      <li xml:lang="pt">Jogos multi-jogador pela rede</li>
+      <li xml:lang="pt-BR">Jogo multijogador via rede</li>
+      <li xml:lang="sk">Hra pre viac hráčov cez sieť</li>
+      <li xml:lang="sl">Večigralstvo preko omrežja</li>
+      <li xml:lang="sr">Играње у више играча преко мреже.</li>
+      <li xml:lang="sr-Latn">Igranje u više igrača preko mreže.</li>
+      <li xml:lang="sr-ijekavian">Играње у више играча преко мреже.</li>
+      <li xml:lang="sr-ijekavianlatin">Igranje u više igrača preko mreže.</li>
+      <li xml:lang="sv">Flera spelare kan spela via ett nätverk</li>
+      <li xml:lang="uk">Гра з декількома учасниками мережею</li>
+      <li xml:lang="x-test">xxMulti-player gaming over a networkxx</li>
+      <li>You can easily create new skins with SVG graphics and the skin editor</li>
+      <li xml:lang="ca">Es poden crear fàcilment aparences noves amb gràfics SVG i l'editor d'aparences</li>
+      <li xml:lang="ca-valencia">Es poden crear fàcilment aparences noves amb gràfics SVG i l'editor d'aparences</li>
+      <li xml:lang="de">Sie können neue Designs mit SVG-Grafik und dem Designeditor erstellen</li>
+      <li xml:lang="en-GB">You can easily create new skins with SVG graphics and the skin editor</li>
+      <li xml:lang="es">Se pueden crear nuevas pieles fácilmente con gráficos SVG y el editor de pieles</li>
+      <li xml:lang="et">Uute nahkade hõlpus loomine SVG-graafikast naharedaktoris</li>
+      <li xml:lang="fi">Voit helposti luoda uusia teemoja SVG-grafiikalla ja teemamuokkaimella</li>
+      <li xml:lang="fr">Vous pouvez créer facilement de nouveaux thèmes en utilisant des graphiques SVG et l'éditeur de thèmes</li>
+      <li xml:lang="gl">Podes crear facilmente novos temas con gráficos SVG e o editor de temas.</li>
+      <li xml:lang="id">Kamu bisa secara mudah menciptakan skin baru dengan grafik SVG dan pengedit skin</li>
+      <li xml:lang="it">Puoi creare facilmente nuovi temi con immagini SVG e l'editore di temi</li>
+      <li xml:lang="ko">SVG 그래픽과 스킨 편집기로 새로운 스킨 만들기</li>
+      <li xml:lang="nl">U kunt gemakkelijk nieuwe skins with maken met SVG graphics en de skin-editor</li>
+      <li xml:lang="nn">Kan enkelt laga eigne grafikktema med SVG-bilete og innebygd temaredigeringsfunksjon</li>
+      <li xml:lang="pl">Można łatwo tworzyć nowe wyglądy przy użyciu grafik SVG i edytora</li>
+      <li xml:lang="pt">Poderá criar facilmente novos visuais com gráficos em SVG e com o editor de visuais</li>
+      <li xml:lang="pt-BR">Você poderá criar facilmente novos visuais com gráficos em SVG e com o editor de visuais</li>
+      <li xml:lang="sk">Ľahko môžete vytvoriť nové skiny pomocou SVG grafiky a editora skinov</li>
+      <li xml:lang="sl">Z urejevalnikom preoblek in datotekami SVG lahko enostavno ustvarite nove preobleke</li>
+      <li xml:lang="sr">Једноствано стварање нових масака кроз СВГ графику и уређивач масака.</li>
+      <li xml:lang="sr-Latn">Jednostvano stvaranje novih masaka kroz SVG grafiku i uređivač masaka.</li>
+      <li xml:lang="sr-ijekavian">Једноствано стварање нових масака кроз СВГ графику и уређивач масака.</li>
+      <li xml:lang="sr-ijekavianlatin">Jednostvano stvaranje novih masaka kroz SVG grafiku i uređivač masaka.</li>
+      <li xml:lang="sv">Det går lätt att skapa nya skal med SVG-grafik och skaleditorn</li>
+      <li xml:lang="uk">Можливість простого створення нових обгорток із графікою SVG та редактор обгорток</li>
+      <li xml:lang="x-test">xxYou can easily create new skins with SVG graphics and the skin editorxx</li>
+      <li>Hot New Stuff support. You can easily download and install new skins</li>
+      <li xml:lang="ca">Permet obtenir novetats candents. Es poden descarregar i instal·lar fàcilment aparences noves</li>
+      <li xml:lang="ca-valencia">Permet obtindre novetats candents. Es poden descarregar i instal·lar fàcilment aparences noves</li>
+      <li xml:lang="de">Sie können neue Designs herunterladen und installieren</li>
+      <li xml:lang="en-GB">Hot New Stuff support. You can easily download and install new skins</li>
+      <li xml:lang="es">Se pueden descargar e instalar nuevas pieles con facilidad</li>
+      <li xml:lang="et">Uue kuuma kraami toetus. Uute nahkade allalaadimine ja paigaldamine on imelihtne</li>
+      <li xml:lang="fi">Teemojen verkkopäivitystuki. Voit helposti ladata ja asentaa uusia teemoja</li>
+      <li xml:lang="fr">Obtenir les dernières nouveautés. Vous pouvez facilement télécharger et installer de nouveaux thèmes.</li>
+      <li xml:lang="gl">Compatibilidade con Hot New Stuff. Podes descargar e instalar novos temas facilmente.</li>
+      <li xml:lang="id">Dukungan Hot New Stuff. Kamu bisa secara mudah mengunduh dan menginstal skin-skin baru</li>
+      <li xml:lang="it">Supporto per le Novità. Puoi scaricare e installare facilmente nuovi temi</li>
+      <li xml:lang="ko">새로운 내용 얻기 지원. 새로운 스킨을 쉽게 다운로드하고 설치할 수 있습니다</li>
+      <li xml:lang="nl">Ondersteuning door Vers-van-de-pers. U kunt gemakkelijk nieuwe skins downloaden en installeren</li>
+      <li xml:lang="nn">Støtte for nedlasting av tema andre har laga</li>
+      <li xml:lang="pl">Obsługa Hot New Stuff. Możesz łatwo pobierać i wgrywać nowe wyglądy</li>
+      <li xml:lang="pt">Suporte para Obter Coisas Novas. Poderá transferir e instalar facilmente novos visuais</li>
+      <li xml:lang="pt-BR">Suporte para o recurso 'Baixar novidades'. Você poderá baixar e instalar facilmente novos visuais</li>
+      <li xml:lang="sk">Podpora horúcich noviniek. Ľahko si môžete stiahnuť a nainštalovať nové skiny</li>
+      <li xml:lang="sl">Podpora za vroče novosti. Nove preobleke lahko enostavno prejmete in namestite</li>
+      <li xml:lang="sr">Подршка за вруће новотарије, ради једноставног преузимања и инсталирања нових масака.</li>
+      <li xml:lang="sr-Latn">Podrška za vruće novotarije, radi jednostavnog preuzimanja i instaliranja novih masaka.</li>
+      <li xml:lang="sr-ijekavian">Подршка за вруће новотарије, ради једноставног преузимања и инсталирања нових масака.</li>
+      <li xml:lang="sr-ijekavianlatin">Podrška za vruće novotarije, radi jednostavnog preuzimanja i instaliranja novih masaka.</li>
+      <li xml:lang="sv">Stöd för heta nyheter. Det går lätt att ladda ner och installera nya skal.</li>
+      <li xml:lang="uk">Підтримка отримання нових карт зі сховища у мережі. Отримати нові обгортки і встановити їх дуже просто.</li>
+      <li xml:lang="x-test">xxHot New Stuff support. You can easily download and install new skinsxx</li>
+    </ul>
+  </description>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=ksirk</url>
+  <url type="help">https://docs.kde.org/?application=ksirk</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=ksirk&amp;source=appdata</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://kde.org/images/screenshots/ksirk.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>ksirk</binary>
+    <binary>ksirkskineditor</binary>
+  </provides>
+  <releases>
+    <release version="21.08.0" date="2021-08-12"/>
+    <release version="21.04.3" date="2021-07-08"/>
+    <release version="21.04.2" date="2021-06-10"/>
+    <release version="21.04.1" date="2021-05-13"/>
+  </releases>
+</component>

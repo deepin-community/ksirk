@@ -1,0 +1,6 @@
+# private library
+ksirk: package-name-doesnt-match-sonames libiris-ksirk2
+# private library
+ksirk: no-symbols-control-file
+# sigh..
+ksirk: embedded-library usr/lib/*/libiris_ksirk.so.2.0.0: libidn

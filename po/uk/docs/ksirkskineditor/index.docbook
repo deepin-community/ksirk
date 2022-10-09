@@ -1,0 +1,1110 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY ksirk '<application
+>KsirK</application
+>'>
+  <!ENTITY ksirkskineditor '<application
+>KsirK Skin Editor</application
+>'>
+  <!ENTITY kappname "&ksirkskineditor;">
+  <!ENTITY package "kdegames">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE">
+]>
+
+<book id="ksirkskineditor" lang="&language;">
+
+<bookinfo>
+<title
+>Підручник з &kappname;</title>
+
+<authorgroup>
+<author
+><firstname
+>Gael</firstname
+> <othername
+>Kleag</othername
+> <surname
+>de Chalendar</surname
+> <affiliation
+> <address
+><email
+>Kleag@free.fr</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+>  
+</authorgroup>
+
+
+<copyright>
+<year
+>2009</year>
+<holder
+>Gael de Chalendar</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<!-- Date of the documentation
+Change date/releaseinfo only if
+   docbook is updated and verified to be valid for the current app version
+   or
+   docbook is proofread and verified to be valid for the current app version
+Don't forget to include this last date.
+Please respect the format of the date (YYYY-MM-DD),it is used by scripts.
+-->
+<date
+>22 травня 2009 року</date>
+
+<!--version information of Frameworks/Plasma/Applications this documentation is valid for.
+Example:
+Frameworks xx.yy for docbooks in frameworks
+Plasma xx.yy for docbooks in plasma workspace
+Applications xx.yy for docbooks released as Applications
+xx.yy (Applications xx.yy) for docbooks with own version released as Applications
+$applicationname xx.yy for applications with independent release schedule (extragear/playground)
+-->
+<releaseinfo
+>4.3</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&ksirk; — комп’ютеризована версія відомої стратегічної гри. У програмі передбачено можливість повної зміни елементів інтерфейсу та зображень, що використовуються у грі (шкірок). У цьому підручнику ви знайдете пояснення щодо створення нових шкірок з нуля за допомогою переглядача файлів, редактора зображень SVG і &kappname;. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdegames</keyword>
+<keyword
+>гра</keyword>
+<keyword
+>стратегія</keyword>
+<keyword
+>Risk</keyword>
+<keyword
+>вільна</keyword>
+<keyword
+>GPL</keyword>
+<keyword
+>шкірка</keyword>
+<keyword
+>редактор</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labeled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title
+>Вступ</title>
+
+<!-- The introduction chapter contains a brief introduction for the
+application that explains what it does and where to report
+problems. Basically a long version of the abstract.  Don't include a
+revision history. (see installation appendix comment) -->
+<para
+>&ksirk; — комп’ютеризована версія відомої стратегічної гри. У програмі передбачено можливість повної зміни елементів інтерфейсу та зображень, що використовуються у грі (шкірок). У цьому підручнику ви знайдете пояснення щодо створення нових шкірок з нуля за допомогою переглядача файлів, редактора зображень SVG і &kappname;. </para>
+<para>
+<screenshot>
+  <screeninfo
+>Ось знімок вікна &kappname;</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main-snapshot.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Знімок вікна</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Для створення нової шкірки слід виконати три основних кроки: створити ієрархію тек, створити графічні зображення, зібрані у єдиному файлі SVG, і належно розташувати спрайти та елементи назв за допомогою &kappname;. </para>
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>Створення шкірки &ksirk;</title>
+  <para
+>Зовнішній вигляд &ksirk; можна повністю змінити. Для користувачів, які мають таланти у малюванні, створення нової шкірки буде дуже простим: скопіюйте існуючу шкірку і змініть графіку у ній, оновіть дані у файлі налаштувань .desktop (цю операцію виконає &kappname;. Останнім кроком буде зміна файла опису даних, які слід встановлювати для шкірки. </para>
+  <para
+>Всі приклади (текст і зображення) взято з типової шкірки &ksirk;.</para>
+  
+  <sect1 id="sdf">
+    <title
+>Структура тек і файлів</title>
+    <para>
+      <itemizedlist>
+        <listitem>
+          <para
+>Data/ : дані, що використовуються програмою для обробки зображень шкірки. <itemizedlist>
+              <listitem
+><para
+>CMakeLists.txt : описує файли, які слід встановити.</para
+></listitem>
+              <listitem
+><para
+>onu.desktop : головний файл опису шкірки. Його опис наведено нижче.</para
+></listitem>
+            </itemizedlist>
+          </para>
+        </listitem>
+        <listitem>
+          <para
+>Images/ : зображення шкірки (карта, спрайти тощо) <itemizedlist>
+              <listitem
+><para
+>CMakeLists.txt : описує файли, які слід встановити.</para
+></listitem>
+              <listitem
+><para
+>pool.svg : карта і всі спрайти, які використовуються у цій шкірці.</para
+></listitem>
+              <listitem
+><para
+>map-mask.png : зображення, за яким програма визначає, над якою з країн на карті зараз знаходиться вказівник миші (див. нижче).</para
+></listitem>
+              <listitem
+><para
+>*.png : всі інші зображення є зображеннями кнопок.</para
+></listitem>
+            </itemizedlist>
+          </para>
+        </listitem>
+        <listitem
+><para
+>CMakeLists.txt/ : Описує файли, які слід встановити.</para
+></listitem>
+        <listitem
+><para
+>Sounds/ : звукові файли шкірки.</para
+></listitem>
+      </itemizedlist>
+    </para>
+    <sect2 id="tdd">
+      <title
+>Тека Data</title>
+        <para
+>У цій теці зберігається лише один файл, world.desktop. У цьому файлі міститься опис вмісту шкірки. Цей файл використовується для опису компонування світу і способу його показу. Вам не потрібно заповнювати його вручну: це зробить за вас &kappname;. Але, з міркувань повноти викладу, ми опишемо його структуру. </para>
+        <para
+>Група onu містить декілька записів країн, декілька записів націй і, нарешті, декілька записів континентів. Далі, різноманітні групи містять опис різних спрайтів, опис різних країн, континентів, націй і типів мети. </para>
+        <para
+>У наступних розділах наведено інформацію про вміст кожної з груп. </para>
+        <sect3>
+          <title
+>Група onu</title>
+          <para>
+            <table>
+              <title
+>Записи групи onu</title>
+              <tgroup cols="2">
+                <thead
+><row
+><entry
+>Назва запису</entry
+><entry
+>Призначення</entry
+></row
+></thead>
+                <tbody>
+                  <row
+><entry
+>width</entry
+><entry
+>Ширина карти шкірки</entry
+></row>
+                  <row
+><entry
+>height</entry
+><entry
+>Висота карти шкірки</entry
+></row>
+                  <row
+><entry
+>skinpath</entry
+><entry
+>Шлях до шкірки, відносно шляху до даних програми (наприклад, skins/default)</entry
+></row>
+                  <row
+><entry
+>nb-countries</entry
+><entry
+>Кількість країн (42 у типовій шкірці). Нижче має бути наведено таку саму кількість записів груп країн</entry
+></row>
+                  <row
+><entry
+>nb-nationalities</entry
+><entry
+>Кількість націй (6 у типовій шкірці). Нижче має бути наведено таку саму кількість записів груп націй</entry
+></row>
+                  <row
+><entry
+>nb-continents</entry
+><entry
+>Кількість континентів (6 у типовій шкірці). Нижче має бути наведено таку саму кількість записів груп континентів</entry
+></row>
+                  <row
+><entry
+>pool</entry
+><entry
+>Шлях і назва файла набору (pool), відносно шляху до шкірки (наприклад, Images/pool.svg)</entry
+></row>
+                  <row
+><entry
+>map-mask</entry
+><entry
+>Шлях і назва файла маски карти, відносно шляху до шкірки (наприклад, Images/map-mask.png)</entry
+></row>
+                  <row
+><entry
+>format-version</entry
+><entry
+>Версія формату файла шкірки (2.0)</entry
+></row>
+                  <row
+><entry
+>name</entry
+><entry
+>Показана назва шкірки</entry
+></row>
+                  <row
+><entry
+>desc</entry
+><entry
+>Розгорнутий опис шкірки</entry
+></row>
+                  <row
+><entry
+>fighters-flag-y-diff</entry
+><entry
+>Різниця висот між спрайтами прапорів і гармат</entry
+></row>
+                  <row
+><entry
+>width-between-flag-and-fighter</entry
+><entry
+>Кількість пікселів між найлівішим пікселем прапора і найправішим пікселем простої гармати (без пострілу і вибуху)</entry
+></row>
+                </tbody>
+              </tgroup>
+            </table>
+          </para>
+        </sect3>
+        <sect3>
+          <title
+>Групи описів спрайтів</title>
+          <para
+>Кожен з типів спрайтів (прапор, піхота, кіннота, гармата, гармата, що стріляє, і гармата, що вибухає) визначається групою. Лише деякі з спрайтів мають запис ширини. Цей запис використовується для відносного позиціонування під час анімації: гармати, постріл і вибух не повинні «рухати» об’єкт навколо прапору країни під час битви. <table>
+              <title
+>Записи групи опису спрайта</title>
+              <tgroup cols="2">
+                <thead
+><row
+><entry
+>Елемент</entry
+><entry
+>Призначення</entry
+></row
+></thead>
+                <tbody>
+                  <row
+><entry
+>width</entry
+><entry
+>Еталонна ширина кадрів спрайта прапора</entry
+></row>
+                  <row
+><entry
+>height</entry
+><entry
+>Еталонна висота кадрів спрайта прапора</entry
+></row>
+                  <row
+><entry
+>frames</entry
+><entry
+>Кількість кадрів у спрайті</entry
+></row>
+                  <row
+><entry
+>versions</entry
+><entry
+>Кількість версій спрайтів прапора</entry
+></row>
+                </tbody>
+              </tgroup>
+            </table>
+          </para>
+        </sect3>
+        <sect3>
+          <title
+>Групи опису країн</title>
+          <para
+>Кожна з країн має свою групу onu, запис країни має власну групу з міткою у вигляді назви країни. У наведеній нижче таблиці показано записи цих груп. </para>
+          <para>
+            <table>
+              <title
+>Записи країн</title>
+              <tgroup cols="2">
+                <thead
+><row
+><entry
+>Назва запису</entry
+><entry
+>Призначення</entry
+></row
+></thead>
+                <tbody>
+                  <row
+><entry
+>id</entry
+><entry
+>Цілий унікальний ідентифікатор країни, який має починатися з нуля (0)</entry
+></row>
+                  <row
+><entry
+>name</entry
+><entry
+>Назва країни, яку буде показано гравцеві</entry
+></row>
+                  <row
+><entry
+>&lt;sprite&gt;-point</entry
+><entry
+>Кожен з типів спрайтів (прапор, піхота тощо) на зображенні країни буде показано у певній позиції, яка визначається цим записом у вигляді двох цілих чисел, відокремлених комою</entry
+></row>
+                  <row
+><entry
+>neighbours</entry
+><entry
+>Список ідентифікаторів країн, сусідніх з поточною країною</entry
+></row>
+                </tbody>
+              </tgroup>
+            </table>
+          </para>
+        </sect3>
+        <sect3>
+          <title
+>Групи опису націй</title>
+          <para
+>Кожна з націй має свою групу onu, запис нації має власну групу з міткою у вигляді назви нації. У наведеній нижче таблиці показано записи цих груп. </para>
+          <para>
+            <table>
+              <title
+>Записи націй</title>
+              <tgroup cols="2">
+                <thead
+><row
+><entry
+>Назва запису</entry
+><entry
+>Призначення</entry
+></row
+></thead>
+                <tbody>
+                  <row
+><entry
+>name</entry
+><entry
+>Назва нації (наприклад, Японія)</entry
+></row>
+                  <row
+><entry
+>leader</entry
+><entry
+>Ім’я, яке буде запропоновано гравцеві, який обрав цю націю</entry
+></row>
+                  <row
+><entry
+>flag</entry
+><entry
+>Назва елемента спрайта прапора країни у файлі SVG onu</entry
+></row>
+                </tbody>
+              </tgroup>
+            </table>
+          </para>
+        </sect3>
+        <sect3>
+          <title
+>Групи опису континентів</title>
+          <para
+>Кожен з континентів має свою групу onu, запис континенту має власну групу з міткою у вигляді назви континенту. У наведеній нижче таблиці показано записи цих груп. </para>
+          <para>
+            <table>
+              <title
+>Записи континентів</title>
+              <tgroup cols="2">
+                <thead
+><row
+><entry
+>Назва запису</entry
+><entry
+>Призначення</entry
+></row
+></thead>
+                <tbody>
+                  <row
+><entry
+>name</entry
+><entry
+>Назва континенту (наприклад, Африка)</entry
+></row>
+                  <row
+><entry
+>id</entry
+><entry
+>Унікальне ціле число для ідентифікації континенту.</entry
+></row>
+                  <row
+><entry
+>bonus</entry
+><entry
+>Кількість армій, які отримуватиме наприкінці ходу гравець, який володіє всіма країнами на континенті</entry
+></row>
+                  <row
+><entry
+>continent-countries</entry
+><entry
+>Список ідентифікаторів країн на поточному континенті</entry
+></row>
+                </tbody>
+              </tgroup>
+            </table>
+          </para>
+        </sect3>
+        <sect3>
+          <title
+>Групи опису мети</title>
+          <para
+>Кожну мету має бути включено до списку групи onu, запис мети має власну групу, чиєю міткою є назва метри. У наведеній нижче таблиці показано список записів цих груп. </para>
+          <para>
+            <table>
+              <title
+>Записи мети</title>
+              <tgroup cols="2">
+                <thead
+><row
+><entry
+>Назва запису</entry
+><entry
+>Призначення</entry
+></row
+></thead>
+                <tbody>
+                  <row
+><entry
+>type</entry
+><entry
+>Тип мети. Може мати значення континенту, країн або гравця</entry
+></row>
+                  <row
+><entry
+>nbArmiesByCountry</entry
+><entry
+>встановлює мінімальну кількість армій, які гравець може залишати у кожній з країн</entry
+></row>
+                  <row
+><entry
+>nbCountries</entry
+><entry
+>встановлює кількість країн, якими має володіти гравець</entry
+></row>
+                  <row
+><entry
+>nbCountriesFallback</entry
+><entry
+>Призначено для типу мети гравця, якщо відповідного гравця буде вбито іншим гравцем, цим параметром встановлюється кількість країн, які має навзамін завоювати гравець</entry
+></row>
+                  <row
+><entry
+>desc</entry
+><entry
+>Повний текстовий опис мети з відповідними заповнювачами (потрібна додаткова документація)</entry
+></row>
+                  <row
+><entry
+>continents</entry
+><entry
+>Список ідентифікаторів континентів, які гравець має підкорити</entry
+></row>
+                </tbody>
+              </tgroup>
+            </table>
+          </para>
+      </sect3>
+    </sect2>
+    <sect2 id="tid">
+      <title
+>Тека Images</title>
+      <para
+>У цій теці містяться кнопки, специфічні для &ksirk; і файл SVG з назвою pool (набір), у якому міститься карта і всі спрайти. </para>
+      <sect3>
+        <title
+>Файл pool.svg</title>
+        <para
+>У цьому файлі SVG містяться всі спрайти гри. Кожен з його елементів має таку назву, щоб програма могла визначити і показати його окремо від інших. </para>
+        <para
+>У типовій шкірці спрайтами є прапори, піхота, кіннота і гармата. Піхота відповідає одній армії, кіннота — п’яти, а гармата — десяти. Гармати також використовуються для показу битв. Ось чому у типовій шкірці три види спрайтів гармат: звичайна нерухома гармата або гармата, що рухається, гармата, що стріляє, гармата, що вибухає. </para>
+        <para
+>Кожне з зображень спрайта складається з об’єднання різних виглядів об’єкта, а кожен з виглядів, — з кадрів. Вигляди має бути впорядковано вертикально, а кадри — горизонтально. Місце, де зображення буде розрізано визначається за висотою зображення і кількістю виглядів, а ширина за кількістю кадрів. Всі ці дані знаходяться у файлі onu.desktop. <mediaobject
+><imageobject
+><imagedata fileref="cannon.png" format="PNG"/></imageobject
+><caption
+><para
+>Приклад зображення спрайта: cannon.png</para
+></caption
+></mediaobject>
+        </para>
+        <para
+>Спрайти армій мають три різних вигляди, згори вниз:</para>
+          <itemizedlist
+><listitem
+><para
+>дивиться праворуч</para
+></listitem>
+          <listitem
+><para
+>дивиться ліворуч і</para
+></listitem
+><listitem>
+          <para
+>в обличчя</para
+></listitem
+></itemizedlist>
+           <para
+>Прапори мають лише один вигляд. Всі елементи тла спрайтів слід зробити прозорими. <mediaobject
+><imageobject
+><imagedata fileref="italy.png" format="PNG"/></imageobject
+><caption
+><para
+>Приклад спрайта зображення прапора: italy.png</para
+></caption
+></mediaobject>
+        </para>
+        <para>
+        <table>
+        <title
+>Елементи набору</title>
+        <tgroup cols="3">
+        <thead
+><row
+><entry
+>Назва елемента</entry
+><entry
+>Зразок зображення</entry
+><entry
+>Призначення</entry
+></row
+></thead>
+        <tbody>
+          <row>
+            <entry
+>map</entry
+><entry
+><mediaobject
+><imageobject
+><imagedata fileref="map.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>Карта шкірки світу. Країни можуть мати довільну форму, але їх має бути зібрано у придатні для розпізнавання оком континенти, лише за розташуванням або лише за кольором.</entry>
+          </row>
+          <row>
+            <entry
+>italy</entry
+><entry
+><mediaobject
+><imageobject
+><imagedata fileref="italy.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>Прапор нації Італії. Кожна з націй повинна мати такий запис.</entry>
+          </row>
+          <row>
+            <entry
+>infantry</entry
+><entry
+><mediaobject
+><imageobject
+><imagedata fileref="infantry.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>Піктограма для однієї армії</entry>
+          </row>
+          <row>
+            <entry
+>cavalry</entry
+><entry
+><mediaobject
+><imageobject
+><imagedata fileref="cavalry.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>Піктограма для п’яти армій</entry>
+          </row>
+          <row>
+            <entry
+>cannon</entry
+><entry
+><mediaobject
+><imageobject
+><imagedata fileref="cannon.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>Піктограма для десяти армій</entry>
+          </row>
+          <row>
+            <entry
+>firing</entry
+><entry
+><mediaobject
+><imageobject
+><imagedata fileref="firing.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>Піктограма для показу армій під час битви</entry>
+          </row>
+          <row>
+            <entry
+>exploding</entry
+><entry
+><mediaobject
+><imageobject
+><imagedata fileref="exploding.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>Піктограма для показу армій, які програли битву</entry>
+          </row>
+          <row>
+            <entry
+>Аляска</entry
+><entry
+><mediaobject
+><imageobject
+><imagedata fileref="alaska.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>Форма країни Аляска. Її буде використано для підсвічування цієї країни. У кожної з країн лише одна така форма. Її колір не використовується, отже його можна обрати будь-яким.</entry>
+          </row>
+          <row>
+            <entry
+>reddices</entry
+><entry
+><mediaobject
+><imageobject
+><imagedata fileref="reddices.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>Для показу результатів битви буде використано червоні кістки</entry>
+          </row>
+          <row>
+            <entry
+>bluedices</entry
+><entry
+><mediaobject
+><imageobject
+><imagedata fileref="bluedices.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>Для показу результатів битви буде використано сині кістки</entry>
+          </row>
+          <row>
+            <entry
+>mark1</entry
+><entry
+><mediaobject
+><imageobject
+><imagedata fileref="mark1.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>Цю позначку буде додано до спрайтів учасників битви, вона позначатиме кількість армій, які беруть участь у битві, у нашому прикладі 1. Існують також елементи mark2 і mark3.</entry>
+          </row>
+        </tbody>
+        </tgroup>
+        </table>
+        </para>
+      </sect3>
+      <sect3>
+        <title
+>Файл map-mask.png</title>
+        <para
+>Цей файл png також відповідає карті шкірки світу, але з закодованими кольорами, за допомогою яких можна точно визначити кожну з країн. Країни повинні мати принаймні такі самі форми, які мають відповідні країни у файлі map.png так, щоб користувач, який навів вказівник на будь-яку частину певної країни і клацнув лівою кнопкою миші, міг обрати потрібну йому країну. Країни, які складаються з невеличких островів, на зразок Індонезії, можна збільшити порівняно з відповідниками з файла map.png, щоб полегшити вибір відповідної країни. <mediaobject>
+            <imageobject
+><imagedata fileref="map-mask.png" format="PNG"/></imageobject>
+            <textobject
+><phrase
+>Зразок маски карти</phrase
+></textobject>
+          </mediaobject>
+        </para>
+        <para
+>Компонент синього кольору (у моделі RGB) у кольорі країни призначено для ідентифікації країни: індексом 0 позначається країна 0 у файлі onu.xml, індексом 1 — країна 1 тощо. Білим кольором (0xFFFFFF у RGB) позначається відсутність країни (моря або, чому б ні, незаселені території). </para>
+      </sect3>
+      <sect3>
+        <title
+>Зображення кнопок</title>
+        <para
+>Назви файлів включено до коду програми, отже їх не можна змінювати. У наведеній нижче таблиці показано всі кнопки, які слід намалювати для теми.</para>
+        <table>
+        <title
+>Кнопки графічного інтерфейсу користувача</title>
+        <tgroup cols="3">
+        <thead
+><row
+><entry
+>Зображення</entry
+><entry
+>Назва файла</entry
+><entry
+>Призначення</entry
+></row
+></thead>
+        <tbody>
+          <row>
+            <entry
+><mediaobject
+><imageobject
+><imagedata fileref="newNetGame.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>newNetGame.png</entry
+><entry
+>Спроба приєднання до гри мережею</entry>
+          </row>
+          <row>
+            <entry
+><mediaobject
+><imageobject
+><imagedata fileref="recycling.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>recycling.png</entry
+><entry
+>Після того, які всі гравці розташують свої армії, можна розпочинати зміну дислокацій (а саме, перестановку армій). Ця кнопка запрошує до такої передислокації.</entry>
+          </row>
+          <row>
+            <entry
+><mediaobject
+><imageobject
+><imagedata fileref="recyclingFinished.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>recyclingFinished.png</entry
+><entry
+>Вибір відмови від перерозподілу. У всіх клієнтських вікнах має бути ця кнопка, яку слід буде натиснути для того, щоб повністю завершити розподіл.</entry>
+          </row>
+          <row>
+            <entry
+><mediaobject
+><imageobject
+><imagedata fileref="nextPlayer.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>nextPlayer.png</entry
+><entry
+>Завершення ходу поточного гравця і перехід ходу до наступного гравця, або перехід до наступного ходу, якщо гравець ходив останнім.</entry>
+          </row>
+          <row>
+            <entry
+><mediaobject
+><imageobject
+><imagedata fileref="attackOne.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>attackOne.png</entry
+><entry
+>Вибір початку атаки силами однієї армії.</entry>
+          </row>
+          <row>
+            <entry
+><mediaobject
+><imageobject
+><imagedata fileref="attackTwo.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>attackTwo.png</entry
+><entry
+>Вибір початку атаки силами двох армій.</entry>
+          </row>
+          <row>
+            <entry
+><mediaobject
+><imageobject
+><imagedata fileref="attackThree.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>attackThree.png</entry
+><entry
+>Вибір початку атаки силами трьох армій.</entry>
+          </row>
+          <row>
+            <entry
+><mediaobject
+><imageobject
+><imagedata fileref="defendOne.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>defendOne.png</entry
+><entry
+>Вибір захисту атакованої країни силами однієї армії.</entry>
+          </row>
+          <row>
+            <entry
+><mediaobject
+><imageobject
+><imagedata fileref="defendTwo.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>defendTwo.png</entry
+><entry
+>Вибір захисту атакованої країни силами двох армій.</entry>
+          </row>
+          <row>
+            <entry
+><mediaobject
+><imageobject
+><imagedata fileref="moveArmies.png" format="PNG"/></imageobject
+></mediaobject
+></entry
+><entry
+>moveArmies.png</entry
+><entry
+>Вибір початку пересування армій між двома країнами (остання дія протягом ходу)</entry>
+          </row>
+        </tbody>
+        </tgroup>
+        </table>
+      </sect3>
+    </sect2>
+    <sect2 id="tsd">
+      <title
+>Тека Sounds</title>
+      <para
+>У цій теці містяться три звукових файла:</para>
+      <itemizedlist
+><listitem
+><para
+>roll.wav відтворюється під час пересування армій </para
+></listitem>
+      <listitem
+><para
+>cannon.wav відтворюється під час ведення вогню і </para
+></listitem
+><listitem>
+      <para
+>crash.wav відтворюється під час вибуху гармати</para
+></listitem
+></itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="using-kse">
+    <title
+>Користування &kappname;</title>
+    <para
+>Після створення графічних елементів у належній теці та файлі SVG, вам достатньо буде створити записи країн, гравців тощо, і пов’язати їх з належними елементами набору SVG. Це можна зробити за допомогою &kappname;. Зауважте, що ви можете дізнатися про призначення частин інтерфейсу програми за допомогою підказок та контекстної довідки, доступ до якої, зазвичай, можна отримати натисканням комбінації клавіш Ctrl+F1.</para>
+    <para>
+      <screenshot>
+        <screeninfo
+>Ось знімок вікна &kappname;</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="main-snapshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Знімок вікна</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </para>
+  </sect1>
+</chapter>
+
+
+
+<chapter id="commands">
+<title
+>Довідка щодо команд</title>
+
+<sect1 id="kapp-mainwindow">
+<title
+>Головне вікно &kappname;</title>
+<sect2>
+<title
+>Кнопки</title>
+<para>
+<variablelist>
+  <varlistentry>
+    <term>
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="load.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Завантажити</phrase>
+          </textobject>
+        </inlinemediaobject>
+      <guibutton
+>Завантажити</guibutton>
+    </term>
+    <listitem
+><para
+><action
+>Наказує програмі завантажити існуючу шкірку.</action
+></para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term>
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="save.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Зберегти</phrase>
+          </textobject>
+        </inlinemediaobject>
+      <guibutton
+>Зберегти</guibutton>
+    </term>
+    <listitem>
+      <para
+><action
+>Зберігає поточну шкірку, яку ви редагуєте.</action
+></para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+</para>
+
+</sect2>
+
+</sect1>
+</chapter>
+
+<chapter id="developers">
+  <title
+>Довідник розробника для &kappname;</title>
+  
+  <para
+>Будь ласка, відвідайте сторінку <ulink url="http://api.kde.org/"
+>http://api.kde.org/</ulink
+>. Там ви знайдете відомості щодо програмного інтерфейсу (API). </para>
+</chapter>
+
+<chapter id="faq">
+<title
+>Запитання і відповіді</title>
+&updating.documentation; </chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Подяки і ліцензія</title>
+
+<para
+>&kappname; </para>
+<para
+>Авторські права на програму належать Gael de Chalendar <email
+>kleag@free.fr</email
+>, ©2009 </para>
+
+<para
+>Авторські права на документацію до програми належать Gael de Chalendar <email
+>kleag@free.fr</email
+>, ©2009 </para>
+
+<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+

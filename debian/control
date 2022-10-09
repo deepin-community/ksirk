@@ -1,0 +1,59 @@
+Source: ksirk
+Section: games
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Daniel Schepler <schepler@debian.org>,
+           Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>,
+           Norbert Preining <norbert@preining.info>,
+           Sune Vuorela <sune@debian.org>,
+Build-Depends: cmake (>= 3.5~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.68.0~),
+               gettext,
+               libkf5completion-dev (>= 5.68.0~),
+               libkf5config-dev (>= 5.68.0~),
+               libkf5configwidgets-dev (>= 5.68.0~),
+               libkf5coreaddons-dev (>= 5.68.0~),
+               libkf5crash-dev (>= 5.68.0~),
+               libkf5doctools-dev (>= 5.68.0~),
+               libkf5i18n-dev (>= 5.68.0~),
+               libkf5iconthemes-dev (>= 5.57.0~),
+               libkf5kdegames-dev (>= 4:21.08.0~),
+               libkf5kio-dev (>= 5.68.0~),
+               libkf5newstuff-dev (>= 5.68.0~),
+               libkf5wallet-dev (>= 5.68.0~),
+               libkf5widgetsaddons-dev (>= 5.68.0~),
+               libkf5xmlgui-dev (>= 5.68.0~),
+               libphonon4qt5-dev,
+               libphonon4qt5experimental-dev,
+               libqca-qt5-2-dev (>= 2.1.0~),
+               libqt5svg5-dev (>= 5.12.0~),
+               pkg-config,
+               pkg-kde-tools (>= 0.15.16),
+               qtbase5-dev (>= 5.12.0~),
+               zlib1g-dev,
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: http://games.kde.org/
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/ksirk
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/ksirk.git
+
+Package: ksirk
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: khelpcenter
+Breaks: ${kde-l10n:all}
+Replaces: ${kde-l10n:all}
+Description: Risk strategy game
+ KsirK is a strategy game inspired by the well known game Risk. It is a
+ multi-player network-enabled game with an AI. The goal of the game is simply
+ to conquer the World. It is done by attacking your neighbours with your
+ armies. At the beginning of the game, countries are distributed to all the
+ players. Each country contains one army represented by an infantryman. Each
+ player has some armies to distribute to his countries. On each turn, each
+ player can attack his neighbours, eventually conquering one or more countries.
+ At the end of each turn, some bonus armies are distributed to the players in
+ function of the number of countries they own. The winner is the player that
+ conquered all the world.
+ .
+ This package is part of the KDE games module.
